@@ -3144,7 +3144,7 @@ input, select, textarea {
 	/*кнопка пульс*/
 
 	.callback-bt {
-	        background:#474a51;
+	        /* background:#474a51; */
 	        box-shadow:0 8px 10px rgba(255,255,255,0.8);
 	        cursor:pointer;
 	        height:50px;
@@ -3187,13 +3187,13 @@ input, select, textarea {
 
 	.callback-bt .text-call:hover span {
 	    opacity: 1;
-	    color: #474a51;
+	    color: #fff;
 	        font-size: 11px;
 	}
 
 	.callback-bt:hover {
 	        z-index:1;
-	        background:#fefefe;
+	        background:#00000070;
 	        color:transparent;
 	        transition:.3s;
 	}
@@ -3202,29 +3202,29 @@ input, select, textarea {
 
 	@-webkit-keyframes hoverWave {
 	        0% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 0 rgba(255,255,255,0.2),0 0 0 0 rgba(255,255,255,0.2)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 0 rgba(255,255,255,0.2),0 0 0 0 rgba(255,255,255,0.2)
 	}
 	40% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 15px rgba(255,255,255,0.2),0 0 0 0 rgba(255,255,255,0.2)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 15px rgba(255,255,255,0.2),0 0 0 0 rgba(255,255,255,0.2)
 	}
 	80% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 26.7px rgba(255,255,255,0.067)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 26.7px rgba(255,255,255,0.067)
 	}
 	100% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 40px rgba(255,255,255,0.0)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 40px rgba(255,255,255,0.0)
 	}
 	}@keyframes hoverWave {
 	        0% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 0 rgba(255,255,255,0.2),0 0 0 0 rgba(56,16255,2555255,0.2)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 0 rgba(255,255,255,0.2),0 0 0 0 rgba(56,16255,2555255,0.2)
 	}
 	40% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 15px rgba(255,255,255,0.2),0 0 0 0 rgba(255,255,255,0.2)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 15px rgba(255,255,255,0.2),0 0 0 0 rgba(255,255,255,0.2)
 	}
 	80% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 26.7px rgba(255,255,255,0.067)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 26.7px rgba(255,255,255,0.067)
 	}
 	100% {
-	        box-shadow:0 8px 10px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 40px rgba(255,255,255,0.0)
+	        box-shadow:0 4px 8px rgba(255,255,255,0.3),0 0 0 30px rgba(255,255,255,0),0 0 0 40px rgba(255,255,255,0.0)
 	}
 	}
 
@@ -3353,7 +3353,7 @@ input, select, textarea {
 /* arrows carousel for mobile */
 @media screen and (max-width: 768px) {
 	.carousel .forward, .carousel .backward {
-		pointer-events: none !important;
+		/* pointer-events: none !important; */
 		cursor: none !important;
 	}
 	.carousel .forward:before, .carousel .backward:before {
