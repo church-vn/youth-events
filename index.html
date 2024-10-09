@@ -243,7 +243,7 @@
 										Также у вас есть возможность подписаться на уведомления о мероприятиях!
 									</p>
 									<input id="btn" class="open-popup" style="margin-top: 20px;" type="button" value="Хочу получать уведомления">
-									<a style="display: block; margin-top: 10px; font-size: 14px;" href="#">Отключить уведомления</a>
+									<a class="open-popup_unsubscribe" style="display: block; margin-top: 10px; font-size: 14px;" href="#">Отключить уведомления</a>
 									</div>
 								
 
@@ -288,9 +288,10 @@
 
 		<div class="popup__bg"> 
 			<form class="popup">
+				<h4 style="color: white;">Заявка на подключение уведомлений о мероприятиях</h4>
 				<img src="images/close.svg" class="close-popup">
 				<label class="hidden_form_item">
-					<textarea id="messageInput" name="topic_message">Тема сообщения: Подписка на уведомления.</textarea>
+					<textarea id="messageInput" name="topic_message">Подписка на уведомления с сайта youth53.ru</textarea>
 					<div class="label__text">
 					</div>
 				</label>
@@ -316,6 +317,43 @@
 					Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c <a href="privacy.html" target="_blank"><u>политикой конфиденциальности</u></a>.
 				</div>
 				<button class="close_through_submit" id="sendButton" type="submit">Отправить</button>
+			</form>
+		</div>  
+
+
+
+<!-- форма для отключения подписки -->
+		<div class="popup__bg_unsubscribe"> 
+			<form class="popup_unsubscribe">
+				<h4 style="color: white;">Заявка на отключение уведомлений</h4>
+				<img src="images/close.svg" class="close-popup_unsubscribe">
+				<label class="hidden_form_item">
+					<textarea id="messageInput_unsubscribe" name="topic_message">Отключение уведомлений с сайта youth53.ru</textarea>
+					<div class="label__text">
+					</div>
+				</label>
+				<label>
+					<input id="sendName_unsubscribe" type="name" name="name">
+					<div class="label__text">
+						Ваше имя
+					</div>
+				</label>
+				<label>
+					<input id="sendTel_unsubscribe" type="tel" name="phone"  class="form-input">
+					<div class="label__text">
+						Ваш телефон
+					</div>
+				</label>
+				<label class="">
+					<textarea id="messageInputpass_unsubscribe" name="pass_message" placeholder="Укажите кодовое слово, которое было записано при регистрации заявки на получение уведомлений!"></textarea>
+					<div class="label__text">
+						Кодовое слово
+					</div>
+				</label>
+				<div class="privacy_policy">
+					Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c <a href="privacy.html" target="_blank"><u>политикой конфиденциальности</u></a>.
+				</div>
+				<button class="close_through_submit_unsubscribe" id="sendButton_unsubscribe" type="submit">Отправить</button>
 			</form>
 		</div>  
 

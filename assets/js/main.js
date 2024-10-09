@@ -217,10 +217,15 @@
 
 // popup
 let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+let popupBg_unsubscribe = document.querySelector('.popup__bg_unsubscribe');
 let popup = document.querySelector('.popup'); // Само окно
+let popup_unsubscribe = document.querySelector('.popup_unsubscribe');
 let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
+let openPopupButtons_unsubscribe = document.querySelectorAll('.open-popup_unsubscribe'); 
 let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
+let closePopupButton_unsubscribe = document.querySelector('.close-popup_unsubscribe'); 
 let closePopupButtonSubmit = document.querySelector('.close_through_submit');
+let closePopupButtonSubmit_unsubscribe = document.querySelector('.close_through_submit_unsubscribe');
 
 openPopupButtons.forEach((button) => { // Перебираем все кнопки
     button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
@@ -229,10 +234,21 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
         popup.classList.add('active'); // И для самого окна
     })
 });
+openPopupButtons_unsubscribe.forEach((button) => { // Перебираем все кнопки
+    button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+        popupBg_unsubscribe.classList.add('active'); // Добавляем класс 'active' для фона
+        popup_unsubscribe.classList.add('active'); // И для самого окна
+    })
+});
 
 closePopupButton.addEventListener('click',() => { // Вешаем обработчик на крестик
     popupBg.classList.remove('active'); // Убираем активный класс с фона
     popup.classList.remove('active'); // И с окна
+});
+closePopupButton_unsubscribe.addEventListener('click',() => { // Вешаем обработчик на крестик
+    popupBg_unsubscribe.classList.remove('active'); // Убираем активный класс с фона
+    popup_unsubscribe.classList.remove('active'); // И с окна
 });
 
 document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
@@ -241,16 +257,21 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
         popup.classList.remove('active'); // И с окна
     }
 });
+document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+    if(e.target === popupBg_unsubscribe) { // Если цель клика - фот, то:
+        popupBg_unsubscribe.classList.remove('active'); // Убираем активный класс с фона
+        popup_unsubscribe.classList.remove('active'); // И с окна
+    }
+});
 
 closePopupButtonSubmit.addEventListener('click',() => { // Вешаем обработчик на submit
     popupBg.classList.remove('active'); // Убираем активный класс с фона
     popup.classList.remove('active'); // И с окна
 });
+closePopupButtonSubmit_unsubscribe.addEventListener('click',() => { // Вешаем обработчик на submit
+    popupBg_unsubscribe.classList.remove('active'); // Убираем активный класс с фона
+    popup_unsubscribe.classList.remove('active'); // И с окна
+});
 
 
-// document.addEventListener('click',(e) => {
-// 	if(e.target === closePopupButtonSubmit) {
-// 	popupBg.classList.remove('.active');
-// 	popup.classList.remove('.active');
-// 	}
-// });
+

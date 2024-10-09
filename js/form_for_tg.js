@@ -19,20 +19,18 @@ text: message,
 });
 
 
+const messageInput_unsubscribe = document.getElementById('messageInput_unsubscribe');
+const sendButton_unsubscribe = document.getElementById('sendButton_unsubscribe');
 
-
-const messageInput1 = document.getElementById('messageInput1');
-const sendButton1 = document.getElementById('sendButton1');
-
-sendButton1.addEventListener('click', (event) => {
+sendButton_unsubscribe.addEventListener('click', (event) => {
 event.preventDefault();
-const message = 'Name : ' + sendName.value + '\nPhone number: ' + " " + sendTel.value + '\nApplication comment: ' + messageInput.value;
+const message = 'Имя: ' + sendName_unsubscribe.value + '\nНомер телефона: ' + sendTel_unsubscribe.value + '\nТема сообщения: ' + messageInput_unsubscribe.value + '\nКодовое слово: ' + messageInputpass_unsubscribe.value;
 if (message) {
 axios.post(`${URL_API}bot${token}/sendMessage`, {
 chat_id: chatId,
 text: message,
 })
-.then(response => console.log(response), alert('Your message has been successfully sent!✅ \nWe will definitely contact you! \nThank you!💚'))
+.then(response => console.log(response), alert('Ваша заявка на отключение уведомлений отправлена!✅'))
 .catch(error => console.error(error));
 }
 });
