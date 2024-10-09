@@ -3353,7 +3353,7 @@ input, select, textarea {
 /* arrows carousel for mobile */
 @media screen and (max-width: 768px) {
 	.carousel .forward, .carousel .backward {
-		/* pointer-events: none !important; */
+		pointer-events: none !important;
 		cursor: none !important;
 	}
 	.carousel .forward:before, .carousel .backward:before {
