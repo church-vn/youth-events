@@ -13,7 +13,7 @@ axios.post(`${URL_API}bot${token}/sendMessage`, {
 chat_id: chatId,
 text: message,
 })
-.then(response => console.log(response), alert('Ваша заявка на уведомления зарегистрирована!✅ \nСпасибо!💚'))
+.then(response => console.log(response), alert('Ваша заявка на уведомления зарегистрирована!✅ Спасибо!💚'))
 .catch(error => console.error(error));
 }
 });
