@@ -40,11 +40,12 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Время для молодежи!</a></h1>
+								<h1><a href="index.html" id="logo">Интерактив в ВН</a></h1>
 								<hr />
 								<p>Хочешь интересно провести время в хорошей компании?<br>
 								Настольные игры | Кофе | <br>
 								Киновечера | Квартирники | Общение</p>
+								<p>Не пропусти самое интересное!</p>
 							</header>
 								<footer>
 							<a class ="" href="#news">
@@ -70,8 +71,8 @@
 									</ul> -->
 								</li>
 								<li><a href="#footer">Фото</a></li>
-								<li><a href="#footer">Хочу получать уведомления</a></li>
-								<li><a href="#footer">Поделиться с друзьями</a></li>
+								<li><a class="open-popup" href="#">Хочу получать уведомления</a></li>
+								<li><a href="#share">Поделиться с друзьями</a></li>
 							</ul>
 						</nav>
 
@@ -81,7 +82,7 @@
 				<section id="banner">
 					<header>
 						<h2><strong>Добро Пожаловать!</strong></h2>
-						<p>
+						<p style="font-size: 1.2rem;">
 							Здесь ты можешь посмотреть все предстоящие события, а также где и когда они будут проходить.
 						</p>
 					</header>
@@ -189,10 +190,10 @@
 				<div id="footer">
 					<div class="container">
 						
-
+						<h2 class="">Фото с мероприятий</h2>
 
 						<div class="row">
-
+							
 
 							<!-- Photos -->
 								<section class="col-4 col-12-mobile">
@@ -283,8 +284,8 @@
 									<p style="text-align: center;">
 										Также у вас есть возможность подписаться на уведомления о мероприятиях!
 									</p>
-									<input id="btn" style="margin-top: 20px;" type="button" value="Хочу получать уведомления">
-									<a style="display: block; margin-top: 10px; font-size: 14px;" href="#">Отключить push уведомления</a>
+									<input id="btn" class="open-popup" style="margin-top: 20px;" type="button" value="Хочу получать уведомления">
+									<a style="display: block; margin-top: 10px; font-size: 14px;" href="#">Отключить уведомления</a>
 									</div>
 								
 
@@ -294,15 +295,15 @@
 							<div class="col-12">
 
 								<!-- Contact -->
-									<section class="contact">
+									<section class="contact" id="share">
 										<header>
 											<h3>Поделись этим сайтом с друзьями</h3>
 										</header>
 										<p style="margin-bottom: 20px;">в социальных сетях</p>
 										<ul class="icons">
-											<li><a href="https://vk.com/share.php?url=https://youth-events.github.io/chill" class="icon brands fa-vk"><span class="label">vk</span></a></li>
-											<li><a href="https://t.me/share/url?url=youth-events.github.io/chill&text=Мероприятия для молодежи" class="icon brands fa-telegram"><span class="label">telegram</span></a></li>
-											<li><a href="https://wa.me/?text=youth-events.github.io/chill" class="icon brands fa-whatsapp"><span class="label">whatsapp</span></a></li>
+											<li><a href="https://vk.com/share.php?url=https://youth53.ru" class="icon brands fa-vk"><span class="label">vk</span></a></li>
+											<li><a href="https://t.me/share/url?url=youth53.ru&text=Мероприятия для молодежи" class="icon brands fa-telegram"><span class="label">telegram</span></a></li>
+											<li><a href="https://wa.me/?text=youth53.ru" class="icon brands fa-whatsapp"><span class="label">whatsapp</span></a></li>
 											<!-- <li><a href="viber://forward?text=https://youth-events.github.io/chill" class="icon brands fa-viber"><span class="label">viber</span></a></li> -->
 										</ul>
 									</section>
@@ -313,8 +314,8 @@
 											<li>Местная религиозная организация Российская Церковь Христиан Веры Евангельской «Слово Жизни» Великого Новгорода. <br>
 												ИНН 5321027846 | КПП 532101001 | ОГРН 1025300005334 от 25 ноября 2002 г. | 173015, Новгородская область, город Великий Новгород, ул. Белова, д.3 <br>
 												<br>
-												© Церковь «Слово Жизни» 2023 | Все права защищены</li><br>
-												<li style="border: none;">Создание сайта: <a href="https://panda-development.ru" target="_blank">Panda Development Studio</a></li>
+												© Церковь «Слово Жизни» 2024 | Все права защищены</li><br>
+												<li style="border: none;">Создание сайта: <a href="https://wordlife.online" target="_blank">Церковь Слово Жизни</a></li>
 										</ul>
 									</div>
 
@@ -326,7 +327,64 @@
 
 		</div>
 
+
+		<div class="popup__bg"> 
+			<form class="popup">
+				<img src="images/close.svg" class="close-popup">
+				<label class="hidden_form_item">
+					<textarea id="messageInput" name="topic_message">Тема сообщения: Подписка на уведомления.</textarea>
+					<div class="label__text">
+					</div>
+				</label>
+				<label>
+					<input id="sendName" type="name" name="name">
+					<div class="label__text">
+						Ваше имя
+					</div>
+				</label>
+				<label>
+					<input id="sendTel" type="tel" name="phone"  class="form-input">
+					<div class="label__text">
+						Ваш телефон
+					</div>
+				</label>
+				<label class="">
+					<textarea id="messageInputpass" name="pass_message" placeholder="Придумайте кодовое слово. Кодовое слово понадобится в случае отмены подписки."></textarea>
+					<div class="label__text">
+						Кодовое слово
+					</div>
+				</label>
+				<div class="privacy_policy">
+					Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c <a href="privacy.html" target="_blank"><u>политикой конфиденциальности</u></a>.
+				</div>
+				<button id="sendButton" type="submit">Отправить</button>
+			</form>
+		</div>  
+
+		
+
+
+		
+
+
 		<!-- Scripts -->
+		<script src="js/jquery-371min.js"></script>
+		<script src="js/jquerymaskedinputmin.js"></script>
+		<script>
+			$("input[name='phone']").mask("+7(999) 999-9999");
+		  
+		  $(".bezvalue_wrap").html("<input class='bezvalue'  type='text' name='bezvalue' value='' />");	 
+		   $(".bezvalue").val("Dolly Duck");
+		   $(".bezvalue").hide();
+		   
+		   
+		   $('.datatitle').on('click',function(){
+		  var mysuperdata = $(this).attr('data-title');
+		  $('#titlezagalovor').html(mysuperdata);
+		   
+		  });
+		  </script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -335,9 +393,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/push.js" defer></script>
-			<script src="assets/js/serviceWorker.min.js" defer></script>
-			<script src="assets/js/script.js"></script>
-
+			<script src="js/form_for_tg.js" defer></script>
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+			
 	</body>
 </html>
