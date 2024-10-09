@@ -220,7 +220,7 @@ let popupBg = document.querySelector('.popup__bg'); // Фон попап окн�
 let popup = document.querySelector('.popup'); // Само окно
 let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
 let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
-
+let closePopupButtonSubmit = document.querySelector('.close_through_submit');
 
 openPopupButtons.forEach((button) => { // Перебираем все кнопки
     button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
@@ -241,3 +241,16 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
         popup.classList.remove('active'); // И с окна
     }
 });
+
+closePopupButtonSubmit.addEventListener('click',() => { // Вешаем обработчик на submit
+    popupBg.classList.remove('active'); // Убираем активный класс с фона
+    popup.classList.remove('active'); // И с окна
+});
+
+
+// document.addEventListener('click',(e) => {
+// 	if(e.target === closePopupButtonSubmit) {
+// 	popupBg.classList.remove('.active');
+// 	popup.classList.remove('.active');
+// 	}
+// });
