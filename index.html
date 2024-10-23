@@ -137,7 +137,7 @@
 								<b>📍Место: </b>ул.Белова 3. <br><small style="font-size: 14px;">(Здание Церкви «Слово Жизни»)</small><br>
 								<b>Подробности здесь: </b> <br><a href="https://vn-kvartirnik.ru" target="_blank">https://квартирник53.рф</a><br>
 								<b>Что вас ждет: </b>творчество, песни, чай/кофе, друзья <br>
-								 <span style="font-size: 14px; color: #ef8376;">Если вы гость (не исполнитель) – регистрация не нужна, но если вы желаете быть исполнителем на квартирнике, то необходимо заполнить форму регистрации на сайте <br><a href="https://vn-kvartirnik.ru" target="_blank">https://квартирник53.рф</a> !</span>
+								 <span style="font-size: 14px; color: #ef8376;">Если вы планируете присутствовать на мероприятии – необходимо заполнить <a class="open-popup_kvartirnik" href="#">форму регистрации здесь</a> или на сайте <br><a href="https://vn-kvartirnik.ru" target="_blank">https://квартирник53.рф</a> !</span>
 							</p>
 						</article>
 
@@ -415,6 +415,42 @@
 			</form>
 		</div>  
 
+
+
+<!-- форма регистрации на квартирник -->
+		<div class="popup__bg_kvartirnik"> 
+			<form class="popup_kvartirnik">
+				<h4 style="color: white;">Регистрация на квартирник!</h4>
+				<img src="images/close.svg" class="close-popup_kvartirnik">
+				<label class="hidden_form_item">
+					<textarea id="messageInput_kvartirnik" name="topic_message">Регистрация на квартирник с сайта youth53</textarea>
+					<div class="label__text">
+					</div>
+				</label>
+				<label>
+					<input id="sendName_kvartirnik" type="name" name="name">
+					<div class="label__text">
+						Ваше имя
+					</div>
+				</label>
+				<label>
+					<input id="sendTel_kvartirnik" type="tel" name="phone"  class="form-input">
+					<div class="label__text">
+						Ваш телефон
+					</div>
+				</label>
+				<label class="">
+					<textarea id="messageInputpass_kvartirnik" name="pass_message" placeholder="Укажите кем вы хотите быть на квартирнике: гостем или исполнителем"></textarea>
+					<div class="label__text">
+						Гость или Исполнитель
+					</div>
+				</label>
+				<div class="privacy_policy">
+					Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c <a href="privacy.html" target="_blank"><u>политикой конфиденциальности</u></a>.
+				</div>
+				<button class="close_through_submit_kvartirnik" id="sendButton_kvartirnik" type="submit">Отправить</button>
+			</form>
+		</div>  
 		
 
 

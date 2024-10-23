@@ -218,14 +218,19 @@
 // popup
 let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
 let popupBg_unsubscribe = document.querySelector('.popup__bg_unsubscribe');
+let popupBg_kvartirnik = document.querySelector('.popup__bg_kvartirnik');
 let popup = document.querySelector('.popup'); // Само окно
 let popup_unsubscribe = document.querySelector('.popup_unsubscribe');
+let popup_kvartirnik = document.querySelector('.popup_kvartirnik');
 let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
 let openPopupButtons_unsubscribe = document.querySelectorAll('.open-popup_unsubscribe'); 
+let openPopupButtons_kvartirnik = document.querySelectorAll('.open-popup_kvartirnik'); 
 let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
 let closePopupButton_unsubscribe = document.querySelector('.close-popup_unsubscribe'); 
+let closePopupButton_kvartirnik = document.querySelector('.close-popup_kvartirnik'); 
 let closePopupButtonSubmit = document.querySelector('.close_through_submit');
 let closePopupButtonSubmit_unsubscribe = document.querySelector('.close_through_submit_unsubscribe');
+let closePopupButtonSubmit_kvartirnik = document.querySelector('.close_through_submit_kvartirnik');
 
 openPopupButtons.forEach((button) => { // Перебираем все кнопки
     button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
@@ -241,6 +246,13 @@ openPopupButtons_unsubscribe.forEach((button) => { // Перебираем вс�
         popup_unsubscribe.classList.add('active'); // И для самого окна
     })
 });
+openPopupButtons_kvartirnik.forEach((button) => { // Перебираем все кнопки
+    button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+        popupBg_kvartirnik.classList.add('active'); // Добавляем класс 'active' для фона
+        popup_kvartirnik.classList.add('active'); // И для самого окна
+    })
+});
 
 closePopupButton.addEventListener('click',() => { // Вешаем обработчик на крестик
     popupBg.classList.remove('active'); // Убираем активный класс с фона
@@ -249,6 +261,10 @@ closePopupButton.addEventListener('click',() => { // Вешаем обработ
 closePopupButton_unsubscribe.addEventListener('click',() => { // Вешаем обработчик на крестик
     popupBg_unsubscribe.classList.remove('active'); // Убираем активный класс с фона
     popup_unsubscribe.classList.remove('active'); // И с окна
+});
+closePopupButton_kvartirnik.addEventListener('click',() => { // Вешаем обработчик на крестик
+    popupBg_kvartirnik.classList.remove('active'); // Убираем активный класс с фона
+    popup_kvartirnik.classList.remove('active'); // И с окна
 });
 
 document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
@@ -263,6 +279,12 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
         popup_unsubscribe.classList.remove('active'); // И с окна
     }
 });
+document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+    if(e.target === popupBg_kvartirnik) { // Если цель клика - фот, то:
+        popupBg_kvartirnik.classList.remove('active'); // Убираем активный класс с фона
+        popup_kvartirnik.classList.remove('active'); // И с окна
+    }
+});
 
 closePopupButtonSubmit.addEventListener('click',() => { // Вешаем обработчик на submit
     popupBg.classList.remove('active'); // Убираем активный класс с фона
@@ -271,6 +293,10 @@ closePopupButtonSubmit.addEventListener('click',() => { // Вешаем обра
 closePopupButtonSubmit_unsubscribe.addEventListener('click',() => { // Вешаем обработчик на submit
     popupBg_unsubscribe.classList.remove('active'); // Убираем активный класс с фона
     popup_unsubscribe.classList.remove('active'); // И с окна
+});
+closePopupButtonSubmit_kvartirnik.addEventListener('click',() => { // Вешаем обработчик на submit
+    popupBg_kvartirnik.classList.remove('active'); // Убираем активный класс с фона
+    popup_kvartirnik.classList.remove('active'); // И с окна
 });
 
 
