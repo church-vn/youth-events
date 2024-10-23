@@ -42,7 +42,7 @@ const sendButton_kvartirnik = document.getElementById('sendButton_kvartirnik');
 
 sendButton_kvartirnik.addEventListener('click', (event) => {
 event.preventDefault();
-const message = 'Тема сообщения: ' + messageInput_kvartirnik.value + '\nИмя: ' + sendName_kvartirnik.value + '\nНомер телефона: ' + sendTel_kvartirnik.value + '\nКодовое слово: ' + messageInputpass_kvartirnik.value;
+const message = 'Тема сообщения: ' + messageInput_kvartirnik.value + '\nИмя: ' + sendName_kvartirnik.value + '\nНомер телефона: ' + sendTel_kvartirnik.value + '\nРоль: ' + messageInputpass_kvartirnik.value;
 if (message) {
 axios.post(`${URL_API}bot${token}/sendMessage`, {
 chat_id: chatId,
